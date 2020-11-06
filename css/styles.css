@@ -10,6 +10,11 @@
     padding: 0;
 }
 
+html {
+    font-size: 62.5%;
+    font-family: 'Rubik', sans-serif;
+}
+
 header {
     position: relative;
     display: flex;
@@ -24,4 +29,13 @@ header {
 
 header .header--container-title {
     color: var(--justWhite);
+}
+
+header img {
+    position: absolute;
+    top: 240px;
+    left: calc(50% - 90px);
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
 }
