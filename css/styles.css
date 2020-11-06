@@ -1,0 +1,27 @@
+:root {
+    --headerPrimary: #00bdd6;
+    --headerSecondary: #0066ff;
+    --justWhite: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 320px;
+    height: 334px;
+    text-align: center;
+    background: linear-gradient(207.8deg, var(--headerSecondary) 20.69%, var(--headerPrimary) 100%);
+}
+
+header .header--container-title {
+    color: var(--justWhite);
+}
