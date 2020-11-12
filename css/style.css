@@ -1,0 +1,272 @@
+:root {
+    --headerPrimary: #00bdd6;
+    --headerSecondary: #0066ff;
+    --justWhite: #ffffff;
+    --justWhiteOpacity: #ffffffB3;
+    --off-white: #faf8f7;
+    --ligth-grey: #8c8c8c;
+    --medium-grey: #454545;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Rubik', sans-serif;
+}
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 280px;
+    height: 300px;
+    text-align: center;
+    background: linear-gradient(207.8deg, var(--headerSecondary) 20.69%, var(--headerPrimary) 100%);
+}
+
+header .header--container-title {
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    height: 218px;
+    margin-top: 60px;
+    text-align: center;
+    align-self: center;
+    color: var(--justWhite);
+}
+
+header .header--container-title h1 {
+    font-size: 3.0rem;
+    font-weight: 900;
+}
+
+header .header--container-title h2 {
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+header .header--img-profile {
+    position: absolute;
+    top: 210px;
+    left: calc(50% - 90px);
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    box-shadow: 0px 4px rgba(22, 22, 21, 0.16);
+    border: none;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    background-color: var(--off-white);
+}
+
+main .main--container-profile {
+    width: 85%;
+    margin: 0 auto;
+    height: auto;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 120px;
+    border-radius: 5px;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0px 1px rgba(22, 22, 21, 0.16);
+}
+
+main .main--container-profile a:hover,
+main .main--container-profile a:link,
+main .main--container-profile a:visited,
+main .main--container-profile a {
+    text-decoration: none;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+main .main--container-profile i {
+    font-size: 30px;
+    display: table;
+    margin: 10px auto;
+}
+
+main .main--container-profile i:hover {
+    cursor: pointer;
+}
+
+main .main--container-profile p {
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    text-align: center;
+    color: var(--ligth-grey);
+}
+
+section h2 {
+    font: 700 1.5em/1 sans-serif;
+    text-align: center;
+    color: #606060;
+    margin: 20px 0;
+}
+
+.main--container-experience {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.main--container-experience div.cols {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.main--container-experience div.cols hr {
+    flex: none;
+    width: 3px;
+    background-color: #00BFFF;
+    border: none;
+    margin: 0 40px;
+}
+
+.main--container-experience div.cols>div {
+    flex: 1;
+}
+
+.main--container-experience div.box {
+    margin: 20px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .2);
+    position: relative;
+}
+
+.main--container-experience div.box h2 {
+    background-color: var(--medium-grey);
+    color: #FFF;
+    padding: 15px;
+    margin: 0;
+    font: 400 1.7em/1;
+    position: relative;
+}
+
+.main--container-experience div.rgt div.box h2::after,
+.main--container-experience div.lft div.box h2::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    top: 0;
+    border: 20px solid transparent;
+    border-top-color: var(--medium-grey);
+    right: -20px;
+}
+
+.main--container-experience div.rgt div.box h2::after {
+    right: unset;
+    left: -20px;
+}
+
+.main--container-experience div.lft div.box h2::before,
+.main--container-experience div.rgt div.box h2::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: -8px;
+    left: -70px;
+    background-color: #00BFFF;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+}
+
+.main--container-experience div.lft div.box h2::before {
+    left: unset;
+    right: -70px;
+}
+
+.main--container-experience div.rgt div.box {
+    top: 50px;
+}
+
+.main--container-experience div.box>div {
+    padding: 20px;
+}
+
+.main--container-experience div.box span,
+.main--container-experience div.box label {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.main--container-experience div.box em {
+    font-style: normal;
+    color: #777;
+    line-height: 1.4;
+}
+
+.main--container-skills {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section--container-skills {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.section--container-skills .skills {
+    width: 33%;
+    height: 320px;
+    background: var(--medium-grey);
+    margin: 0 10px;
+}
+
+.section--container-skills .skills h3 {
+    margin-top: 25px;
+    color: var(--justWhite);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.progress-bar-skills {
+    width: 90%;
+    margin: 0 auto;
+    color: var(--justWhite);
+}
+
+.progress-bar-skills .skills--container {
+    margin-top: 20px;
+}
+
+.progress-bar-skills div .progress-bar {
+    width: 100%;
+    height: 2px;
+    background: #000000
+}
+
+.progress-bar-skills div .progress-bar div {
+    height: 100%;
+    background: var(--justWhite);
+}
+
+.progress-bar-skills .skills--container .description {
+    width: 100%;
+    display: inline-block;
+}
+
+.progress-bar-skills .skills--container #title {
+    float: left;
+}
+
+.progress-bar-skills .skills--container #percentage {
+    float: right;
+}
