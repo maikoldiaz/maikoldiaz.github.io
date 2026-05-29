@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+  PLANTILLA DE ARTÍCULO. No la enlaces ni la publiques tal cual.
+  Para un post nuevo:
+    1. Copia este archivo a blog/<slug>.html  (slug en kebab-case).
+    2. Agrega el post al array `posts` de js/main.js con el MISMO slug.
+    3. Reemplaza todos los {{TOKENS}} de abajo.
+    4. Escribe el cuerpo dentro de .article__body (empieza en <h2>).
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- === SEO básico === -->
+    <title>{{TÍTULO DEL POST}} — Maikol Diaz</title>
+    <meta name="description" content="{{RESUMEN EN 1-2 FRASES, 150-160 CARACTERES}}">
+    <link rel="canonical" href="https://maikoldiaz.github.io/blog/{{slug}}.html">
+
+    <!-- === Open Graph / Twitter (cómo se ve al compartir el link) === -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{TÍTULO DEL POST}}">
+    <meta property="og:description" content="{{RESUMEN}}">
+    <meta property="og:url" content="https://maikoldiaz.github.io/blog/{{slug}}.html">
+    <!-- Imagen para compartir. Por defecto la OG genérica del sitio; si quieres una propia
+         del post, crea una de 1200×630 px y cámbiala aquí (y en "image" del JSON-LD). -->
+    <meta property="og:image" content="https://maikoldiaz.github.io/assets/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- === Fuentes + estilos del sitio === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <!-- === Datos estructurados para Google (rich snippets) === -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "{{TÍTULO DEL POST}}",
+        "description": "{{RESUMEN}}",
+        "author": { "@type": "Person", "name": "Maikol Diaz", "url": "https://maikoldiaz.github.io/" },
+        "datePublished": "{{AAAA-MM-DD}}",
+        "dateModified": "{{AAAA-MM-DD}}",
+        "url": "https://maikoldiaz.github.io/blog/{{slug}}.html",
+        "image": "https://maikoldiaz.github.io/assets/og.png",
+        "keywords": "{{palabras, clave, separadas, por, comas}}",
+        "inLanguage": "es"
+    }
+    </script>
+</head>
+
+<body>
+    <header class="nav" id="top">
+        <a href="../index.html#top" class="nav__logo">Maikol<span class="accent">.</span></a>
+        <a href="../index.html#blog" class="btn btn--ghost nav__back">← Blog</a>
+    </header>
+
+    <article class="article">
+        <p class="article__tag">{{TAG: IA | .NET | Cloud | …}}</p>
+        <h1 class="article__title">{{TÍTULO DEL POST}}</h1>
+        <p class="article__meta">
+            <time datetime="{{AAAA-MM-DD}}">{{fecha legible, ej. 28 de mayo de 2026}}</time>
+            · <span data-reading-time></span>
+        </p>
+        <div class="article__body">
+            <!-- Cuerpo del artículo. Estructura sugerida (ver blog/README.md):
+                 hook → contexto → secciones <h2> con código → trade-offs → conclusión → CTA.
+                 Usa <h2>/<h3>, <p>, <ul>/<ol>, <a>, <strong>, <code>, <pre><code>…</code></pre>. -->
+            <p>{{Hook: tema.}}</p>
+
+            <h2>{{Primera sección}}</h2>
+            <p>{{Desarrollo. Una idea por sección.}}</p>
+
+            <h2>{{Conclusión}}</h2>
+            <p>{{2-4 takeaways accionables.}}</p>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <p class="footer__copy">© <span id="year"></span> Maikol Diaz</p>
+    </footer>
+
+    <script src="../js/blog.js"></script>
+</body>
+
+</html>
